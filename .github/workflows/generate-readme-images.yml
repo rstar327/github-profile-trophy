@@ -1,6 +1,8 @@
 name: Generate README Images
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 0 1 * *" # Monthly
