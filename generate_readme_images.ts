@@ -29,6 +29,11 @@ const examples = [
   { name: "no_frame", column: 6, row: 3, noFrame: true },
 ];
 
+/**
+ * Generate SVG images for all themes and example configurations using GitHub user data and write them to the output directory.
+ *
+ * Fetches user information via GithubApiService and exits with code 1 if the fetched data is missing required fields. Ensures the output directory exists, then renders and writes one SVG per theme and one SVG per example configuration into the configured output directory, logging each generated file path.
+ */
 async function main() {
   const svc = new GithubApiService();
   const userInfo = (await svc.requestUserInfo(username)) as any;
