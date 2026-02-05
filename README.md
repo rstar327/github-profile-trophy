@@ -26,7 +26,7 @@ readme, change the `?username=` value to your GitHub's username.
 [![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327)](https://github.com/rstar327/github-profile-trophy)
 ```
 
-[![](./images/quickstart.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Quickstart trophy example](./images/quickstart.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Use theme
 
@@ -36,7 +36,7 @@ Add optional parameter of the theme.
 [![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&theme=onedark)](https://github.com/rstar327/github-profile-trophy)
 ```
 
-[![](./images/theme_onedark_example.svg)](https://github.com/rstar327/github-profile-trophy)
+[![One Dark theme example](./images/theme_onedark_example.svg)](https://github.com/rstar327/github-profile-trophy)
 
 **[More detail](#apply-theme)**
 
@@ -59,7 +59,7 @@ Ranks are `SSS` `SS` `S` `AAA` `AA` `A` `B` `C` `UNKNOWN` `SECRET`.
 The acquisition condition is secret, but you can see this.
 
 <p align="center">
-  <img width="110" src="https://github.com/user-attachments/assets/40461f38-a317-431c-93d2-a56c2e803cf3" />
+  <img width="110" src="https://github.com/user-attachments/assets/40461f38-a317-431c-93d2-a56c2e803cf3" alt="Secret rank trophy" />
 </p>
 
 There are only a few secret trophies. Therefore, if you come up with interesting
@@ -68,7 +68,7 @@ conditions, I will consider adding a trophy. I am waiting for contributions.
 # About Display details
 
 <p align="center">
-  <img width="220" src="https://user-images.githubusercontent.com/6661165/91642962-6333e600-ea6a-11ea-83af-e371e996bfa6.png" />
+  <img width="220" src="https://user-images.githubusercontent.com/6661165/91642962-6333e600-ea6a-11ea-83af-e371e996bfa6.png" alt="Trophy display details" />
 </p>
 
 1. Title name of aggregation target.
@@ -97,7 +97,7 @@ You can filter the display by specifying the titles of trophy.
 https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Followers
 ```
 
-[![](./images/filter_followers.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Filter by Followers title](./images/filter_followers.svg)](https://github.com/rstar327/github-profile-trophy)
 
 If you want to specify multiple titles.
 
@@ -105,7 +105,7 @@ If you want to specify multiple titles.
 https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Stars,Followers
 ```
 
-[![](./images/filter_stars_followers.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Filter by Stars and Followers titles](./images/filter_stars_followers.svg)](https://github.com/rstar327/github-profile-trophy)
 
 You can also exclude the trophies you don't want to display.
 
@@ -122,7 +122,7 @@ You can filter the display by specifying the ranks.\
 https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S
 ```
 
-[![](./images/filter_rank_s.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Filter by S rank](./images/filter_rank_s.svg)](https://github.com/rstar327/github-profile-trophy)
 
 If you want to specify multiple ranks.
 
@@ -130,7 +130,7 @@ If you want to specify multiple ranks.
 https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S,AAA
 ```
 
-[![](./images/filter_rank_s_aaa.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Filter by S and AAA ranks](./images/filter_rank_s_aaa.svg)](https://github.com/rstar327/github-profile-trophy)
 
 You can also exclude ranks.
 
@@ -167,7 +167,7 @@ Restrict row & column
 https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2&column=3
 ```
 
-[![](./images/row2_column3.svg)](https://github.com/rstar327/github-profile-trophy)
+[![2 rows and 3 columns layout](./images/row2_column3.svg)](https://github.com/rstar327/github-profile-trophy)
 
 Adaptive column
 
@@ -211,99 +211,99 @@ Available themes.
 
 ### flat
 
-[![](./images/flat.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Flat theme preview](./images/flat.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### onedark
 
-[![](./images/onedark.svg)](https://github.com/rstar327/github-profile-trophy)
+[![One Dark theme preview](./images/onedark.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### gruvbox
 
-[![](./images/gruvbox.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Gruvbox theme preview](./images/gruvbox.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dracula
 
-[![](./images/dracula.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Dracula theme preview](./images/dracula.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### monokai
 
-[![](./images/monokai.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Monokai theme preview](./images/monokai.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### chalk
 
-[![](./images/chalk.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Chalk theme preview](./images/chalk.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### nord
 
-[![](./images/nord.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Nord theme preview](./images/nord.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### alduin
 
-[![](./images/alduin.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Alduin theme preview](./images/alduin.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### darkhub
 
-[![](./images/darkhub.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Dark Hub theme preview](./images/darkhub.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### juicyfresh
 
-[![](./images/juicyfresh.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Juicy Fresh theme preview](./images/juicyfresh.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### buddhism
 
-[![](./images/buddhism.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Buddhism theme preview](./images/buddhism.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### oldie
 
-[![](./images/oldie.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Oldie theme preview](./images/oldie.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### radical
 
-[![](./images/radical.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Radical theme preview](./images/radical.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### onestar
 
-[![](./images/onestar.svg)](https://github.com/rstar327/github-profile-trophy)
+[![One Star theme preview](./images/onestar.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### discord
 
-[![](./images/discord.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Discord theme preview](./images/discord.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### algolia
 
-[![](./images/algolia.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Algolia theme preview](./images/algolia.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### gitdimmed
 
-[![](./images/gitdimmed.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Git Dimmed theme preview](./images/gitdimmed.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### tokyonight
 
-[![](./images/tokyonight.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Tokyo Night theme preview](./images/tokyonight.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### matrix
 
-[![](./images/matrix.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Matrix theme preview](./images/matrix.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### apprentice
 
-[![](./images/apprentice.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Apprentice theme preview](./images/apprentice.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dark_dimmed
 
-[![](./images/dark_dimmed.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Dark Dimmed theme preview](./images/dark_dimmed.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dark_lover
 
-[![](./images/dark_lover.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Dark Lover theme preview](./images/dark_lover.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### kimbie_dark
 
-[![](./images/kimbie_dark.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Kimbie Dark theme preview](./images/kimbie_dark.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### aura
 
-[![](./images/aura.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Aura theme preview](./images/aura.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Margin Width
 
@@ -311,7 +311,7 @@ You can put a margin in the width between trophies.\
 `Available value: number type`\
 `Default: margin-w=0`
 
-[![](./images/margin_w.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Margin width example](./images/margin_w.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Margin Height
 
@@ -319,11 +319,11 @@ You can put a margin in the height between trophies.\
 `Available value: number type`\
 `Default: margin-h=0`
 
-[![](./images/margin_h.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Margin height example](./images/margin_h.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Example layout
 
-[![](./images/example_layout.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Example layout](./images/example_layout.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Transparent background
 
@@ -331,7 +331,7 @@ You can turn the background transparent.\
 `Available value: boolean type (true or false)`\
 `Default: no-bg=false`
 
-[![](./images/no_bg.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Transparent background example](./images/no_bg.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Hide frames
 
@@ -339,7 +339,7 @@ You can hide the frames around the trophies.\
 `Available value: boolean type (true or false)`\
 `Default: no-frame=false`
 
-[![](./images/no_frame.svg)](https://github.com/rstar327/github-profile-trophy)
+[![Hidden frames example](./images/no_frame.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Generate an svg file localy
 
