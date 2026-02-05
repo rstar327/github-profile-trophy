@@ -43,12 +43,25 @@ type YearError = {
 
 type YearResult = YearData | YearError;
 
+/**
+ * Type guard that determines whether a YearResult represents an error.
+ *
+ * @param result - The year result to test
+ * @returns `true` if `result` is a `YearError`, `false` otherwise
+ */
 function isYearError(result: YearResult): result is YearError {
   return "error" in result;
 }
 
 /**
- * Process items in batches with concurrency limit
+ * Process an array of items in parallel batches constrained by a concurrency limit.
+ *
+ * Each batch of up to `concurrency` items is processed in parallel; batches are executed sequentially.
+ *
+ * @param items - The input items to process.
+ * @param concurrency - Maximum number of items processed in parallel per batch.
+ * @param processor - Async function applied to each item that produces a result.
+ * @returns An array of results corresponding to `items` in the same order. 
  */
 async function processBatched<T, R>(
   items: T[],
@@ -65,7 +78,11 @@ async function processBatched<T, R>(
 }
 
 /**
- * Exponential backoff delay
+ * Compute the exponential backoff delay.
+ *
+ * @param attempt - Zero-based retry attempt index (0 yields `baseDelay`)
+ * @param baseDelay - Base delay in milliseconds
+ * @returns The delay in milliseconds calculated as `baseDelay * 2^attempt`
  */
 function getBackoffDelay(attempt: number, baseDelay: number): number {
   return baseDelay * Math.pow(2, attempt);
