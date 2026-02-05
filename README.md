@@ -23,7 +23,7 @@ Add the following code to your readme. When pasting the code into your profile's
 readme, change the `?username=` value to your GitHub's username.
 
 ```
-[![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327)](https://github.com/rstar327/github-profile-trophy)
+[![trophy](https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327)](https://github.com/rstar327/github-profile-trophy)
 ```
 
 [![Quickstart trophy example](./images/quickstart.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -33,7 +33,7 @@ readme, change the `?username=` value to your GitHub's username.
 Add optional parameter of the theme.
 
 ```
-[![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&theme=onedark)](https://github.com/rstar327/github-profile-trophy)
+[![trophy](https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&theme=onedark)](https://github.com/rstar327/github-profile-trophy)
 ```
 
 [![One Dark theme example](./images/theme_onedark_example.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -94,7 +94,7 @@ conditions, I will consider adding a trophy. I am waiting for contributions.
 You can filter the display by specifying the titles of trophy.
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Followers
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&title=Followers
 ```
 
 [![Filter by Followers title](./images/filter_followers.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -102,7 +102,7 @@ https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Follo
 If you want to specify multiple titles.
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Stars,Followers
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&title=Stars,Followers
 ```
 
 [![Filter by Stars and Followers titles](./images/filter_stars_followers.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -110,7 +110,7 @@ https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Stars
 You can also exclude the trophies you don't want to display.
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=-Stars,-Followers
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&title=-Stars,-Followers
 ```
 
 ## Filter by ranks
@@ -119,7 +119,7 @@ You can filter the display by specifying the ranks.\
 `Available values: SECRET SSS SS S AAA AA A B C`
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&rank=S
 ```
 
 [![Filter by S rank](./images/filter_rank_s.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -127,7 +127,7 @@ https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S
 If you want to specify multiple ranks.
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S,AAA
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&rank=S,AAA
 ```
 
 [![Filter by S and AAA ranks](./images/filter_rank_s_aaa.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -135,7 +135,7 @@ https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S,AAA
 You can also exclude ranks.
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=-C,-B
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&rank=-C,-B
 ```
 
 **NOTE: Since `UNKNOWN` is denoted by `?`, in order to include or exclude it you
@@ -152,19 +152,19 @@ Trophy will be hidden if it exceeds the range of both row and column.
 Restrict only row
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&row=2
 ```
 
 Restrict only column
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&column=2
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&column=2
 ```
 
 Restrict row & column
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2&column=3
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&row=2&column=3
 ```
 
 [![2 rows and 3 columns layout](./images/row2_column3.svg)](https://github.com/rstar327/github-profile-trophy)
@@ -172,7 +172,7 @@ https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2&colum
 Adaptive column
 
 ```
-https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&column=-1
+https://github-profile-trophy-rstar327.vercel.app/api/?username=rstar327&column=-1
 ```
 
 You can set `column` to `-1` to adapt the width to the number of trophies, the
