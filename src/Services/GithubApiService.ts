@@ -26,6 +26,51 @@ export const TOKENS = [
   Deno.env.get("GITHUB_TOKEN2"),
 ];
 
+// Constants for batched parallel fetching
+const BATCH_CONCURRENCY = 3;
+const YEAR_QUERY_MAX_RETRIES = 3;
+const YEAR_QUERY_BASE_DELAY = 1000;
+
+type YearData = {
+  year: number;
+  data: GitHubUserActivity;
+};
+
+type YearError = {
+  year: number;
+  error: ServiceError;
+};
+
+type YearResult = YearData | YearError;
+
+function isYearError(result: YearResult): result is YearError {
+  return "error" in result;
+}
+
+/**
+ * Process items in batches with concurrency limit
+ */
+async function processBatched<T, R>(
+  items: T[],
+  concurrency: number,
+  processor: (item: T) => Promise<R>,
+): Promise<R[]> {
+  const results: R[] = [];
+  for (let i = 0; i < items.length; i += concurrency) {
+    const batch = items.slice(i, i + concurrency);
+    const batchResults = await Promise.all(batch.map(processor));
+    results.push(...batchResults);
+  }
+  return results;
+}
+
+/**
+ * Exponential backoff delay
+ */
+function getBackoffDelay(attempt: number, baseDelay: number): number {
+  return baseDelay * Math.pow(2, attempt);
+}
+
 export class GithubApiService extends GithubRepository {
   async requestUserRepository(
     username: string,
@@ -60,27 +105,98 @@ export class GithubApiService extends GithubRepository {
     const startYear = createdAt.getFullYear();
     const currentYear = now.getFullYear();
 
+    // Build array of years to fetch
+    const years: number[] = [];
+    for (let year = startYear; year <= currentYear; year++) {
+      years.push(year);
+    }
+
+    // Fetch year data with retry and backoff
+    const fetchYearWithRetry = async (year: number): Promise<YearResult> => {
+      const from = new Date(year, 0, 1).toISOString();
+      const to = new Date(year, 11, 31, 23, 59, 59).toISOString();
+
+      let lastError: ServiceError | null = null;
+
+      for (let attempt = 0; attempt < YEAR_QUERY_MAX_RETRIES; attempt++) {
+        const yearData = await this.executeQuery<GitHubUserActivity>(
+          queryUserActivityWithDateRange,
+          { username, from, to },
+        );
+
+        if (!(yearData instanceof ServiceError)) {
+          return { year, data: yearData };
+        }
+
+        lastError = yearData;
+
+        // Check if it's a rate limit error (419) - apply backoff
+        if (yearData.code === 419) {
+          const delay = getBackoffDelay(attempt, YEAR_QUERY_BASE_DELAY);
+          Logger.error(
+            `Rate limit hit for year ${year}, attempt ${attempt + 1}/${YEAR_QUERY_MAX_RETRIES}, waiting ${delay}ms`,
+          );
+          await new Promise((resolve) => setTimeout(resolve, delay));
+          continue;
+        }
+
+        // For non-rate-limit errors, retry with shorter delay
+        if (attempt < YEAR_QUERY_MAX_RETRIES - 1) {
+          const delay = getBackoffDelay(attempt, YEAR_QUERY_BASE_DELAY / 2);
+          Logger.error(
+            `Error fetching year ${year}, attempt ${attempt + 1}/${YEAR_QUERY_MAX_RETRIES}, retrying in ${delay}ms`,
+          );
+          await new Promise((resolve) => setTimeout(resolve, delay));
+        }
+      }
+
+      return {
+        year,
+        error: lastError ??
+          new ServiceError(
+            `Failed to fetch data for year ${year}`,
+            EServiceKindError.NOT_FOUND,
+          ),
+      };
+    };
+
+    // Process years in batches with concurrency limit
+    const results = await processBatched(
+      years,
+      BATCH_CONCURRENCY,
+      fetchYearWithRetry,
+    );
+
+    // Check for any errors and surface them
+    const errors = results.filter(isYearError);
+    if (errors.length > 0) {
+      const failedYears = errors.map((e) => e.year).join(", ");
+      Logger.error(
+        `Failed to fetch contribution data for years: ${failedYears}`,
+      );
+      // Return the first error encountered, preserving its error kind
+      const firstError = errors[0].error;
+      const errorKind = (firstError.cause as EServiceKindError) ??
+        EServiceKindError.NOT_FOUND;
+      return new ServiceError(
+        `Failed to fetch all-time data (years failed: ${failedYears})`,
+        errorKind,
+      );
+    }
+
+    // Aggregate successful results
     let totalCommits = 0;
     let totalRestricted = 0;
     let totalReviews = 0;
 
-    // Fetch contributions for each year
-    for (let year = startYear; year <= currentYear; year++) {
-      const from = new Date(year, 0, 1).toISOString();
-      const to = new Date(year, 11, 31, 23, 59, 59).toISOString();
-
-      const yearData = await this.executeQuery<GitHubUserActivity>(
-        queryUserActivityWithDateRange,
-        { username, from, to },
-      );
-
-      if (!(yearData instanceof ServiceError)) {
+    for (const result of results) {
+      if (!isYearError(result)) {
         totalCommits +=
-          yearData.contributionsCollection.totalCommitContributions;
+          result.data.contributionsCollection.totalCommitContributions;
         totalRestricted +=
-          yearData.contributionsCollection.restrictedContributionsCount;
+          result.data.contributionsCollection.restrictedContributionsCount;
         totalReviews +=
-          yearData.contributionsCollection.totalPullRequestReviewContributions;
+          result.data.contributionsCollection.totalPullRequestReviewContributions;
       }
     }
 
@@ -165,15 +281,15 @@ export class GithubApiService extends GithubRepository {
           TOKENS[attempt],
         );
       });
-    } catch (error) {
-      if (error.cause instanceof ServiceError) {
+    } catch (error: unknown) {
+      if (error instanceof Error && error.cause instanceof ServiceError) {
         Logger.error(error.cause.message);
         return error.cause;
       }
       if (error instanceof Error && error.cause) {
         Logger.error(JSON.stringify(error.cause, null, 2));
       } else {
-        Logger.error(error);
+        Logger.error(String(error));
       }
       return new ServiceError("not found", EServiceKindError.NOT_FOUND);
     }
