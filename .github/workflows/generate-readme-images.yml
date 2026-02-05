@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate README images
         env:
-          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN1: ${{ secrets.PAT_TOKEN }}
         run: |
           deno run --allow-net --allow-env --allow-read --allow-write ./generate_readme_images.ts rstar327 ./images
 
