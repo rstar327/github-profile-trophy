@@ -8,9 +8,13 @@ import {
 } from "../user_info.ts";
 
 export abstract class GithubRepository {
-  abstract requestUserInfo(username: string): Promise<UserInfo | ServiceError>;
+  abstract requestUserInfo(
+    username: string,
+    alltime?: boolean,
+  ): Promise<UserInfo | ServiceError>;
   abstract requestUserActivity(
     username: string,
+    alltime?: boolean,
   ): Promise<GitHubUserActivity | ServiceError>;
   abstract requestUserIssue(
     username: string,
@@ -20,6 +24,7 @@ export abstract class GithubRepository {
   ): Promise<GitHubUserPullRequest | ServiceError>;
   abstract requestUserRepository(
     username: string,
+    alltime?: boolean,
   ): Promise<GitHubUserRepository | ServiceError>;
 }
 

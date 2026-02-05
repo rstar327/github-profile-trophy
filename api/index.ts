@@ -124,14 +124,17 @@ async function app(req: Request): Promise<Response> {
   const ranks: Array<string> = params.getAll("rank").flatMap((r) =>
     r.split(",")
   ).map((r) => r.trim());
+  const alltime = params.getBooleanValue("alltime", false);
 
-  const userKeyCache = ["v1", username].join("-");
+  const userKeyCache = ["v1", username, alltime ? "alltime" : "current"].join(
+    "-",
+  );
   const userInfoCached = await cacheProvider.get(userKeyCache) || "{}";
   let userInfo = JSON.parse(userInfoCached);
   const hasCache = !!Object.keys(userInfo).length;
 
   if (!hasCache) {
-    const userResponseInfo = await client.requestUserInfo(username);
+    const userResponseInfo = await client.requestUserInfo(username, alltime);
     if (userResponseInfo instanceof ServiceError) {
       return new Response(
         ErrorPage({ error: userResponseInfo }).render(),

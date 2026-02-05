@@ -8,9 +8,11 @@ import {
 } from "../user_info.ts";
 import {
   queryUserActivity,
+  queryUserActivityWithDateRange,
   queryUserIssue,
   queryUserPullRequest,
   queryUserRepository,
+  queryUserRepositoryAllTime,
 } from "../Schemas/index.ts";
 import { Retry } from "../Helpers/Retry.ts";
 import { CONSTANTS } from "../utils.ts";
@@ -27,17 +29,72 @@ export const TOKENS = [
 export class GithubApiService extends GithubRepository {
   async requestUserRepository(
     username: string,
+    alltime = false,
   ): Promise<GitHubUserRepository | ServiceError> {
-    return await this.executeQuery<GitHubUserRepository>(queryUserRepository, {
+    const query = alltime ? queryUserRepositoryAllTime : queryUserRepository;
+    return await this.executeQuery<GitHubUserRepository>(query, {
       username,
     });
   }
   async requestUserActivity(
     username: string,
+    alltime = false,
   ): Promise<GitHubUserActivity | ServiceError> {
-    return await this.executeQuery<GitHubUserActivity>(queryUserActivity, {
-      username,
-    });
+    if (!alltime) {
+      return await this.executeQuery<GitHubUserActivity>(queryUserActivity, {
+        username,
+      });
+    }
+
+    // For alltime, first get account creation date
+    const initialData = await this.executeQuery<GitHubUserActivity>(
+      queryUserActivity,
+      { username },
+    );
+    if (initialData instanceof ServiceError) {
+      return initialData;
+    }
+
+    const createdAt = new Date(initialData.createdAt);
+    const now = new Date();
+    const startYear = createdAt.getFullYear();
+    const currentYear = now.getFullYear();
+
+    let totalCommits = 0;
+    let totalRestricted = 0;
+    let totalReviews = 0;
+
+    // Fetch contributions for each year
+    for (let year = startYear; year <= currentYear; year++) {
+      const from = new Date(year, 0, 1).toISOString();
+      const to = new Date(year, 11, 31, 23, 59, 59).toISOString();
+
+      const yearData = await this.executeQuery<GitHubUserActivity>(
+        queryUserActivityWithDateRange,
+        { username, from, to },
+      );
+
+      if (!(yearData instanceof ServiceError)) {
+        totalCommits +=
+          yearData.contributionsCollection.totalCommitContributions;
+        totalRestricted +=
+          yearData.contributionsCollection.restrictedContributionsCount;
+        totalReviews +=
+          yearData.contributionsCollection.totalPullRequestReviewContributions;
+      }
+    }
+
+    // Return aggregated data
+    return {
+      createdAt: initialData.createdAt,
+      contributionsCollection: {
+        totalCommitContributions: totalCommits,
+        restrictedContributionsCount: totalRestricted,
+        totalPullRequestReviewContributions: totalReviews,
+      },
+      organizations: initialData.organizations,
+      followers: initialData.followers,
+    };
   }
   async requestUserIssue(
     username: string,
@@ -54,12 +111,15 @@ export class GithubApiService extends GithubRepository {
       { username },
     );
   }
-  async requestUserInfo(username: string): Promise<UserInfo | ServiceError> {
+  async requestUserInfo(
+    username: string,
+    alltime = false,
+  ): Promise<UserInfo | ServiceError> {
     // Avoid to call others if one of them is null
 
     const promises = Promise.allSettled([
-      this.requestUserRepository(username),
-      this.requestUserActivity(username),
+      this.requestUserRepository(username, alltime),
+      this.requestUserActivity(username, alltime),
       this.requestUserIssue(username),
       this.requestUserPullRequest(username),
     ]);
