@@ -5,58 +5,17 @@
 </div>
 <div align="center">
 
-[![stargazers](https://img.shields.io/github/stars/ryo-ma/github-profile-trophy)](https://github.com/ryo-ma/github-profile-trophy/stargazers)
-[![forks](https://img.shields.io/github/forks/ryo-ma/github-profile-trophy)](https://github.com/ryo-ma/github-profile-trophy/network/members)
-[![issues](https://img.shields.io/github/issues/ryo-ma/github-profile-trophy)](https://github.com/ryo-ma/github-profile-trophy/issues)
-[![license](https://img.shields.io/github/license/ryo-ma/github-profile-trophy)](https://github.com/ryo-ma/github-profile-trophy/blob/master/LICENSE)
-[![share](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fryo-ma%2Fgithub-profile-trophy)](https://twitter.com/intent/tweet?text=Add%20dynamically%20generated%20GitHub%20Trophy%20on%20your%20readme%0D%0A&url=https%3A%2F%2Fgithub.com%2Fryo-ma%2Fgithub-profile-trophy)
+[![stargazers](https://img.shields.io/github/stars/rstar327/github-profile-trophy)](https://github.com/rstar327/github-profile-trophy/stargazers) [![forks](https://img.shields.io/github/forks/rstar327/github-profile-trophy)](https://github.com/rstar327/github-profile-trophy/network/members) [![issues](https://img.shields.io/github/issues/rstar327/github-profile-trophy)](https://github.com/rstar327/github-profile-trophy/issues) [![license](https://img.shields.io/github/license/rstar327/github-profile-trophy)](https://github.com/rstar327/github-profile-trophy/blob/master/LICENSE) [![share](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Frstar327%2Fgithub-profile-trophy)](https://twitter.com/intent/tweet?text=Add%20dynamically%20generated%20GitHub%20Trophy%20on%20your%20readme%0D%0A&url=https%3A%2F%2Fgithub.com%2Frstar327%2Fgithub-profile-trophy)
 
 </div>
 <p align="center">
   You can use this service for free. I'm looking for sponsors to help us keep up with this service❤️
 </p>
 <div align="center">
-  <a href="https://github.com/sponsors/ryo-ma">
+  <a href="https://github.com/sponsors/rstar327">
     <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4" alt="Sponsor"/>
   </a>
 </div>
-
-> ⚠️ **Notice from the Project Owner**
->
-> Hello everyone,\
-> I am the owner of this project.
->
-> Currently, due to the increase in users and traffic, the cost of maintaining
-> this service has become quite high, and it is becoming financially difficult
-> to sustain.\
-> As costs continue to rise, there is a possibility that the service may have to
-> be discontinued.\
-> We are now at a stage where monetization and financial support are essential.
->
-> Your support in the following ways would be greatly appreciated:
->
-> 1. Financial support: [GitHub Sponsors](https://github.com/sponsors/ryo-ma)
-> 2. Reducing server load through self-hosting (by forking on GitHub and
->    deploying to Vercel)
-> 3. Share your github-profile-trophy URL deployed to Vercel for load balancing
->    (Send email: saka_ro@yahoo.co.jp or Pull Request)
-
-# Load balancing endpoints
-
-These are endpoints provided by volunteers. Please use these in moderation.
-
-- [https://github-profile-trophy-liard-delta.vercel.app](https://github-profile-trophy-liard-delta.vercel.app/)
-  by [Adwitya](https://github.com/Adwitya)
-- [https://github-profile-trophy-fork-two.vercel.app](https://github-profile-trophy-fork-two.vercel.app)
-  by [hesreallyhim](https://github.com/hesreallyhim)
-- [https://github-profile-trophy-winning.vercel.app](https://github-profile-trophy-winning.vercel.app)
-  by [hongbo-wei](https://github.com/hongbo-wei)
-- [https://github-profile-trophy-kannan.vercel.app](https://github-profile-trophy-kannan.vercel.app)
-  by [kann4n](https://github.com/kann4n)
-- [https://trophy.ryglcloud.net](https://trophy.ryglcloud.net)
-  by [PracticalRyan](https://github.com/PracticalRyan)
-- [https://github-profile-trophy-tawny.vercel.app](https://github-profile-trophy-tawny.vercel.app)
-  by [vijaypurohit322](https://github.com/vijaypurohit322)
 
 # Quick Start
 
@@ -64,24 +23,20 @@ Add the following code to your readme. When pasting the code into your profile's
 readme, change the `?username=` value to your GitHub's username.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327)](https://github.com/rstar327/github-profile-trophy)
 ```
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ryo-ma&column=8&rank=SSS,SS,S,AAA,AA,A,B,C" />
-</p>
+[![Quickstart trophy example](./images/quickstart.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Use theme
 
 Add optional parameter of the theme.
 
 ```
-[![trophy](https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&theme=onedark)](https://github.com/rstar327/github-profile-trophy)
 ```
 
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/92327052-d99b9e00-f091-11ea-9a24-c7ec86982370.png">
-</p>
+[![One Dark theme example](./images/theme_onedark_example.svg)](https://github.com/rstar327/github-profile-trophy)
 
 **[More detail](#apply-theme)**
 
@@ -104,7 +59,7 @@ Ranks are `SSS` `SS` `S` `AAA` `AA` `A` `B` `C` `UNKNOWN` `SECRET`.
 The acquisition condition is secret, but you can see this.
 
 <p align="center">
-  <img width="110" src="https://github.com/user-attachments/assets/40461f38-a317-431c-93d2-a56c2e803cf3" />
+  <img width="110" src="https://github.com/user-attachments/assets/40461f38-a317-431c-93d2-a56c2e803cf3" alt="Secret rank trophy" />
 </p>
 
 There are only a few secret trophies. Therefore, if you come up with interesting
@@ -113,7 +68,7 @@ conditions, I will consider adding a trophy. I am waiting for contributions.
 # About Display details
 
 <p align="center">
-  <img width="220" src="https://user-images.githubusercontent.com/6661165/91642962-6333e600-ea6a-11ea-83af-e371e996bfa6.png" />
+  <img width="220" src="https://user-images.githubusercontent.com/6661165/91642962-6333e600-ea6a-11ea-83af-e371e996bfa6.png" alt="Trophy display details" />
 </p>
 
 1. Title name of aggregation target.
@@ -139,27 +94,23 @@ conditions, I will consider adding a trophy. I am waiting for contributions.
 You can filter the display by specifying the titles of trophy.
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&title=Followers
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Followers
 ```
 
-<p align="center">
-  <img width="110" src="https://user-images.githubusercontent.com/6661165/92317141-80ebe700-f038-11ea-8501-4015bfbb2cf4.png">
-</p>
+[![Filter by Followers title](./images/filter_followers.svg)](https://github.com/rstar327/github-profile-trophy)
 
 If you want to specify multiple titles.
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&title=Stars,Followers
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=Stars,Followers
 ```
 
-<p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/3b8a1c8b-afcd-49dc-ab18-a439d5c36a83">
-</p>
+[![Filter by Stars and Followers titles](./images/filter_stars_followers.svg)](https://github.com/rstar327/github-profile-trophy)
 
 You can also exclude the trophies you don't want to display.
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&title=-Stars,-Followers
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&title=-Stars,-Followers
 ```
 
 ## Filter by ranks
@@ -168,27 +119,23 @@ You can filter the display by specifying the ranks.\
 `Available values: SECRET SSS SS S AAA AA A B C`
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=S
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S
 ```
 
-<p align="center">
-  <img width="110" src="https://user-images.githubusercontent.com/6661165/91642657-1cdd8780-ea68-11ea-994b-4568a55cd22a.png" />
-</p>
+[![Filter by S rank](./images/filter_rank_s.svg)](https://github.com/rstar327/github-profile-trophy)
 
 If you want to specify multiple ranks.
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=S,AAA
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=S,AAA
 ```
 
-<p align="center">
-  <img width="220" src="https://github.com/user-attachments/assets/0c2ffca8-4b03-4d46-b1d7-4e1eb6702f68">
-</p>
+[![Filter by S and AAA ranks](./images/filter_rank_s_aaa.svg)](https://github.com/rstar327/github-profile-trophy)
 
 You can also exclude ranks.
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=-C,-B
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&rank=-C,-B
 ```
 
 **NOTE: Since `UNKNOWN` is denoted by `?`, in order to include or exclude it you
@@ -205,29 +152,27 @@ Trophy will be hidden if it exceeds the range of both row and column.
 Restrict only row
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&row=2
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2
 ```
 
 Restrict only column
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&column=2
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&column=2
 ```
 
 Restrict row & column
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&row=2&column=3
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&row=2&column=3
 ```
 
-<p align="center">
-  <img width="330" src="https://user-images.githubusercontent.com/6661165/91659474-c07f7400-eb0a-11ea-84f2-eb6b42547829.png">
-</p>
+[![2 rows and 3 columns layout](./images/row2_column3.svg)](https://github.com/rstar327/github-profile-trophy)
 
 Adaptive column
 
 ```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&column=-1
+https://github-profile-trophy-rstar327.vercel.app/?username=rstar327&column=-1
 ```
 
 You can set `column` to `-1` to adapt the width to the number of trophies, the
@@ -266,243 +211,99 @@ Available themes.
 
 ### flat
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=flat
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/92325601-039b9300-f087-11ea-983a-fce8133549ee.png">
-</p>
+[![Flat theme preview](./images/flat.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### onedark
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=onedark
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/92327052-d99b9e00-f091-11ea-9a24-c7ec86982370.png">
-</p>
+[![One Dark theme preview](./images/onedark.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### gruvbox
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=gruvbox
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/92315152-e9c56600-f01c-11ea-9536-1bfbb158cfcb.png">
-</p>
+[![Gruvbox theme preview](./images/gruvbox.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dracula
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=dracula
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/92490273-c91f2b00-f22b-11ea-9481-b5daae4d7bc3.png">
-</p>
+[![Dracula theme preview](./images/dracula.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### monokai
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=monokai
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/93725426-2c289e80-fbea-11ea-96a4-f6490ccf2126.png">
-</p>
+[![Monokai theme preview](./images/monokai.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### chalk
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=chalk
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/94294003-1de7d300-ff9a-11ea-91d1-60417a4d919b.png">
-</p>
+[![Chalk theme preview](./images/chalk.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### nord
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=nord
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/94346857-7ab2be80-006a-11eb-9082-36d377ae2531.png">
-</p>
+[![Nord theme preview](./images/nord.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### alduin
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=alduin
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/99085932-2a88bf00-260c-11eb-9b26-d2f125773831.png">
-</p>
+[![Alduin theme preview](./images/alduin.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### darkhub
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=darkhub
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/102801126-249ab080-43f8-11eb-91c8-f56f94c35777.png">
-</p>
+[![Dark Hub theme preview](./images/darkhub.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### juicyfresh
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=juicyfresh
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/104810094-edbc8c80-5835-11eb-8c20-a76192a00728.png">
-</p>
+[![Juicy Fresh theme preview](./images/juicyfresh.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### buddhism
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=buddhism
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/113709167-2412f500-971d-11eb-9ee5-0ab292cf8b4c.png">
-</p>
+[![Buddhism theme preview](./images/buddhism.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### oldie
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=oldie
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/113709581-a0a5d380-971d-11eb-8583-770dc4091ebf.png">
-</p>
+[![Oldie theme preview](./images/oldie.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### radical
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=radical
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/116633521-adbc8800-a994-11eb-97c4-e45a32721491.png">
-</p>
+[![Radical theme preview](./images/radical.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### onestar
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=onestar
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/122048400-2af46d00-ce1c-11eb-94e0-c2c6ddaf6819.png">
-</p>
+[![One Star theme preview](./images/onestar.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### discord
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=discord
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/122048628-7dce2480-ce1c-11eb-9792-1e600b384c4d.png">
-</p>
+[![Discord theme preview](./images/discord.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### algolia
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=algolia
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/131685203-92a31101-2d93-4d18-b24a-d81a8bb012c5.png">
-</p>
+[![Algolia theme preview](./images/algolia.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### gitdimmed
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=gitdimmed
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/131685406-799a864f-2691-4840-bb71-1db9c087a507.png">
-</p>
+[![Git Dimmed theme preview](./images/gitdimmed.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### tokyonight
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=tokyonight
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/6661165/135482087-27764d6f-53b4-4c2a-8473-32431d12660c.png">
-</p>
+[![Tokyo Night theme preview](./images/tokyonight.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### matrix
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=matrix
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/31789752/141647414-15cfe279-af12-4746-a886-f494c25c096d.png">
-</p>
+[![Matrix theme preview](./images/matrix.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### apprentice
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=apprentice
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/31789752/144701036-285cdd4b-d687-4ddc-95c2-7ccae9e25a1f.png">
-</p>
+[![Apprentice theme preview](./images/apprentice.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dark_dimmed
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=dark_dimmed
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/31789752/147340893-655b9fa5-138f-4f29-91ec-2a17c93822d1.png">
-</p>
+[![Dark Dimmed theme preview](./images/dark_dimmed.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### dark_lover
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=dark_lover
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/31789752/152659041-de5b23cb-1be8-4e6b-b07b-726127ab8c3a.png">
-</p>
+[![Dark Lover theme preview](./images/dark_lover.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### kimbie_dark
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=kimbie_dark
-```
-
-<p align="center">
-  <img width="660" src="https://user-images.githubusercontent.com/8161064/288417332-408705a4-ae9c-47fe-af1a-9fb08555f526.png">
-</p>
+[![Kimbie Dark theme preview](./images/kimbie_dark.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ### aura
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=aura
-```
-
-<p align="center">
-  <img width="660" src="https://github.com/user-attachments/assets/18a2266c-9a88-4882-940d-162c0c4d36e0">
-</p>
+[![Aura theme preview](./images/aura.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Margin Width
 
@@ -510,13 +311,7 @@ You can put a margin in the width between trophies.\
 `Available value: number type`\
 `Default: margin-w=0`
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&margin-w=15
-```
-
-<p align="center">
-  <img width="735" src="https://user-images.githubusercontent.com/6661165/93668661-e0ca9f00-fac8-11ea-9bec-325454f49fb4.png">
-</p>
+[![Margin width example](./images/margin_w.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Margin Height
 
@@ -524,23 +319,11 @@ You can put a margin in the height between trophies.\
 `Available value: number type`\
 `Default: margin-h=0`
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&margin-h=15
-```
-
-<p align="center">
-  <img width="110" height="330" src="https://github.com/user-attachments/assets/233dee5b-4491-46cc-884a-39d0aa928752">
-</p>
+[![Margin height example](./images/margin_h.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Example layout
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&column=3&margin-w=15&margin-h=15
-```
-
-<p align="center">
-  <img width="360" src="https://user-images.githubusercontent.com/6661165/93668677-ff309a80-fac8-11ea-8ae3-3e3e8adbef39.png">
-</p>
+[![Example layout](./images/example_layout.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Transparent background
 
@@ -548,13 +331,7 @@ You can turn the background transparent.\
 `Available value: boolean type (true or false)`\
 `Default: no-bg=false`
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&no-bg=true
-```
-
-<p align="center">
-  <img width="969" src="https://github.com/user-attachments/assets/32d3b63b-7845-42cb-b71c-31abaa673bcb">
-</p>
+[![Transparent background example](./images/no_bg.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Hide frames
 
@@ -562,13 +339,7 @@ You can hide the frames around the trophies.\
 `Available value: boolean type (true or false)`\
 `Default: no-frame=false`
 
-```
-https://github-profile-trophy.vercel.app/?username=ryo-ma&no-frame=true
-```
-
-<p align="center">
-  <img width="936" src="https://github.com/user-attachments/assets/54de15a3-d907-4a50-8117-170aae74d1cd">
-</p>
+[![Hidden frames example](./images/no_frame.svg)](https://github.com/rstar327/github-profile-trophy)
 
 ## Generate an svg file localy
 
@@ -605,47 +376,5 @@ Check [CONTRIBUTING.md](./CONTRIBUTING.md) for more details.
 # License
 
 This product is licensed under the
-[MIT License](https://github.com/ryo-ma/github-profile-trophy/blob/master/LICENSE).
+[MIT License](https://github.com/rstar327/github-profile-trophy/blob/master/LICENSE).
 
-# 🙏 Sponsors
-
-Thank you so much to all the amazing sponsors who support this project! Your
-contributions help keep development going and make this work possible.
-
-## 💖 Monthly Sponsors
-
-- [@Leay15](https://github.com/Leay15) - $10 / month
-- [@hesreallyhim](https://github.com/hesreallyhim) - $10 / month
-- [@pmsosa](https://github.com/pmsosa) — $10 / month
-- [@chenfeng-huang](https://github.com/chenfeng-huang) — $10 / month
-- [@holly-hacker](https://github.com/holly-hacker) — $2 / month
-- [@skillerious](https://github.com/skillerious) — $2 / month (since Aug
-  17, 2024)
-- [@LudovicGardy](https://github.com/LudovicGardy) — $10 / month (since Aug
-  15, 2024)
-- [@alexcastrodev](https://github.com/alexcastrodev) — $10 / month (since Oct
-  13, 2023, previously $50 / month)
-- [@great-work-told-is](https://github.com/great-work-told-is) — $10 / month
-  (since Apr 12, 2023)
-- [@Ilithy](https://github.com/Ilithy) — $5 / month (since Jul 21, 2022)
-- [@weakish](https://github.com/weakish) — $2 / month (since Jan 22, 2022)
-- [@Kazuhito00](https://github.com/Kazuhito00) — $2 / month (since Jan 19, 2022)
-- [@KATO-Hiro](https://github.com/KATO-Hiro) — $2 / month (since Jan 5, 2022)
-- [@batazor](https://github.com/batazor) — $2 / month (since Oct 28, 2021)
-- [@port19x](https://github.com/port19x) — $2 / month (since Jan 27, 2022)
-
-## 🎁 One-Time Sponsors
-
-- [@hesreallyhim](https://github.com/hesreallyhim) - $100 (Jan 11, 2026)
-- [@Seo-4d696b75](https://github.com/Seo-4d696b75) — $10 (Jan 4, 2026)
-- [@massif-01](https://github.com/massif-01) — $5 (December 17, 2025)
-- [@tapegram](https://github.com/tapegram) — $20 (December 6, 2025)
-- [@WilliamCorotan](https://github.com/WilliamCorotan) — $5 (November 5, 2025)
-- [@arnabnandy7](https://github.com/arnabnandy7) — $10 (Oct 3, 2025)
-- [@JoqarSabon](https://github.com/JoqarSabon) — $5 (May 24, 2024)
-- [@syaghoubi00](https://github.com/syaghoubi00) — $5 (Jan 28, 2024)
-- [@pylapp](https://github.com/pylapp) — $20 (Jan 15, 2024)
-- [@Dobefu](https://github.com/Dobefu) — $10 (Dec 22, 2024)
-- [@michele-lorenzoni](https://github.com/michele-lorenzoni) — $10 (Nov
-  26, 2024)
-- [@skillerious](https://github.com/skillerious) — $10 (Aug 17, 2024)
