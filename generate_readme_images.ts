@@ -1,4 +1,4 @@
-import "https://deno.land/x/dotenv@v0.5.0/load.ts";
+import "@std/dotenv/load";
 
 import { GithubApiService } from "./src/Services/GithubApiService.ts";
 import { Card } from "./src/card.ts";
