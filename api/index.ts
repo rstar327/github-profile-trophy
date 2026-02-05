@@ -36,6 +36,27 @@ export default (request: Request) =>
     return app(req);
   });
 
+/**
+ * Handle an HTTP request to generate a GitHub trophies SVG or return an error page.
+ *
+ * Parses query parameters, retrieves (and caches) the requested GitHub user data, and returns
+ * an HTTP Response containing either a rendered SVG card on success or an HTML error page
+ * when parameters are invalid or the upstream service reports an error.
+ *
+ * @param req - Incoming Request. Recognized query parameters:
+ *   - `username` (required): GitHub username to render.
+ *   - `row`, `column`: layout dimensions.
+ *   - `theme`: theme name.
+ *   - `margin-w`, `margin-h`: horizontal and vertical spacing.
+ *   - `no-bg`, `no-frame`: booleans to disable background or frame.
+ *   - `title` (repeatable or comma-separated): panel titles.
+ *   - `rank` (repeatable or comma-separated): panel ranks.
+ *   - `alltime`: boolean to request all-time data instead of current-period data.
+ *
+ * @returns An HTTP Response containing the rendered SVG card on success, or an HTML error page
+ * describing the problem; the Response status code reflects the outcome (for example, 200 on success,
+ * 400 for missing parameters, or the upstream service's error code). 
+ */
 async function app(req: Request): Promise<Response> {
   const params = parseParams(req);
   const username = params.get("username");
@@ -124,14 +145,17 @@ async function app(req: Request): Promise<Response> {
   const ranks: Array<string> = params.getAll("rank").flatMap((r) =>
     r.split(",")
   ).map((r) => r.trim());
+  const alltime = params.getBooleanValue("alltime", false);
 
-  const userKeyCache = ["v1", username].join("-");
+  const userKeyCache = ["v1", username, alltime ? "alltime" : "current"].join(
+    "-",
+  );
   const userInfoCached = await cacheProvider.get(userKeyCache) || "{}";
   let userInfo = JSON.parse(userInfoCached);
   const hasCache = !!Object.keys(userInfo).length;
 
   if (!hasCache) {
-    const userResponseInfo = await client.requestUserInfo(username);
+    const userResponseInfo = await client.requestUserInfo(username, alltime);
     if (userResponseInfo instanceof ServiceError) {
       return new Response(
         ErrorPage({ error: userResponseInfo }).render(),
