@@ -20,7 +20,7 @@ jobs:
     steps:
       # Step 1: Checkout repository
       - name: Git Checkout Deno Module
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # Step 2: Setup Deno
       - name: Setup Deno
